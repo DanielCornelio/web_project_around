@@ -1,7 +1,11 @@
 .profile {
   border: 1px solid #fff;
   width: 882px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .profile__avatar {
   width: 120px;
   height: 120px;
@@ -9,6 +13,22 @@
 .profile__avatar-image {
   width: 100%;
   border-radius: 50%;
+}
+.profile__info{
+  width: 414px;
+  display: flex;
+  align-items: center;
+}
+.profile__name{
+  font-size: 42px;
+  width: 500;
+  line-height: 56px;
+}
+.profile__edit-button{
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid #fff;
 }
 .profile__add-button {
   width: 150px;
@@ -19,3 +39,4 @@
   color: #fff;
   cursor: pointer;
 }
+
