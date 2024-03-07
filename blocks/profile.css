@@ -1,3 +1,15 @@
+.profile {
+  border: 1px solid #fff;
+  width: 882px;
+}
+.profile__avatar {
+  width: 120px;
+  height: 120px;
+}
+.profile__avatar-image {
+  width: 100%;
+  border-radius: 50%;
+}
 .profile__add-button {
   width: 150px;
   height: 50px;
