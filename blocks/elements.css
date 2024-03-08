@@ -10,12 +10,19 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    position: relative;
 
 }
 .card__image{
     border-radius: 10px 10px 0 0;
     width: 100%;
 
+}
+.card__delete{
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    width: 18px;
 }
 .card__caption{
     padding: 25px;
