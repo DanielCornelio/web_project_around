@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 40px 0 50px;
+  padding: 40px 0 50px;
 }
 
 .profile__avatar {
@@ -48,4 +48,26 @@
   color: #fff;
   cursor: pointer;
   margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .profile {
+    flex-direction: column;
+    width: 320px;
+    max-height: none;
+  }
+  .profile__info {
+    width: 280px;
+  }
+  .profile__name {
+    font-size: 22px;
+  }
+  .profile__job {
+    font-size: 14px;
+  }
+
+  .profile__add-button {
+    width: 282px;
+    margin: 0 auto;
+  }
 }
