@@ -1,12 +1,16 @@
-.overlay {
-  visibility: visible;
+.cover {
+  display: none;
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0px;
-  display: flex;
+
   justify-content: center;
   background-color: rgba(0, 0, 0, 50%);
+}
+.cover_visible {
+  top: 0px;
+  display: flex;
+  display: flex;
 }
 .form {
   background-color: #fff;
