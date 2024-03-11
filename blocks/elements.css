@@ -39,5 +39,8 @@
     gap: 20px;
     justify-content: center;
   }
-  
+  .card {
+    width: 282px;
+    height: 361px;
+  }
 }

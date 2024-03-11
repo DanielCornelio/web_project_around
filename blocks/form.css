@@ -59,9 +59,34 @@
   background-color: #000;
   border: none;
   border-radius: 2px;
+  font-size: 18px;
 }
 
 .form__button:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 767px) {
+  .form {
+    width: 282px;
+    padding: 25px 22px;
+  }
+  .form__close {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: -40px;
+    right: 0;
+  }
+  .form__input {
+    padding-bottom: 9px;
+  }
+  .form__input_title {
+    margin: 76px 0 30px;
+  }
+  .form__button {
+    height: 46px;
+    font-size: 14px;
+  }
 }
