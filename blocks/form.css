@@ -30,6 +30,9 @@
   top: -40px;
   right: -40px;
 }
+.form__close:hover {
+  cursor: pointer;
+}
 .form__input {
   font-size: 14px;
   font-weight: 400;
@@ -54,6 +57,11 @@
   width: 100%;
   color: #fff;
   background-color: #000;
-  /* border: none; */
+  border: none;
   border-radius: 2px;
+}
+
+.form__button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
 }
