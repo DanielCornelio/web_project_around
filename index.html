@@ -1,19 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./pages/index.css">
-</head>
-<body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Around The U.S.</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="body">
     <div class="page">
-        <header class="header">Header</header>
-        <main class="main">
-            <section class="profile">Profile</section>
-            <section class="elements">Elements</section>
-        </main>
-        <footer class="footer">Footer</footer>
+      <header class="header">
+        <img
+          class="header__logo"
+          src="./images/white_logo.svg"
+          alt="around logo"
+        />
+      </header>
+      <main class="main">
+        <section class="profile">
+          <div class="profile__avatar">
+            <img
+              class="profile__avatar-image"
+              src="./images/avatar-image.jpg"
+              alt="profile photo"
+            />
+          </div>
+          <div class="profile__info">
+            <p class="profile__name">Jacques Cousteau</p>
+            <button type="button" class="profile__edit-button">
+              <img
+                class="profile__edit-icon"
+                src="./images/edit.png"
+                alt="edit icon"
+              />
+            </button>
+            <p class="profile__job">Explorador</p>
+          </div>
+          <button class="profile__add-button">
+            <img src="./images/add.png" alt="" />
+          </button>
+        </section>
+        <section class="elements">
+          <figure class="card">
+            <img
+              class="card__image"
+              src="./images/kirill-pershin-1088404-unsplash.jpg"
+              alt=""
+            />
+            <img
+              src="./images/trash.svg"
+              alt="trash icon"
+              class="card__delete"
+            />
+            <figcaption class="card__caption">Valle de Yosemite</figcaption>
+          </figure>
+          <figure class="card">
+            <img
+              class="card__image"
+              src="./images/kirill-pershin-1088404-unsplash.jpg"
+              alt=""
+            />
+            <img
+              src="./images/trash.svg"
+              alt="trash icon"
+              class="card__delete"
+            />
+            <figcaption class="card__caption">Valle de Yosemite</figcaption>
+          </figure>
+          <figure class="card">
+            <img
+              class="card__image"
+              src="./images/kirill-pershin-1088404-unsplash.jpg"
+              alt=""
+            />
+            <img
+              src="./images/trash.svg"
+              alt="trash icon"
+              class="card__delete"
+            />
+            <figcaption class="card__caption">Valle de Yosemite</figcaption>
+          </figure>
+          <figure class="card">
+            <img
+              class="card__image"
+              src="./images/kirill-pershin-1088404-unsplash.jpg"
+              alt=""
+            />
+            <img
+              src="./images/trash.svg"
+              alt="trash icon"
+              class="card__delete"
+            />
+            <figcaption class="card__caption">Valle de Yosemite</figcaption>
+          </figure>
+          <figure class="card">
+            <img
+              class="card__image"
+              src="./images/kirill-pershin-1088404-unsplash.jpg"
+              alt=""
+            />
+            <img
+              src="./images/trash.svg"
+              alt="trash icon"
+              class="card__delete"
+            />
+            <figcaption class="card__caption">Valle de Yosemite</figcaption>
+          </figure>
+          <figure class="card">
+            <img
+              class="card__image"
+              src="./images/kirill-pershin-1088404-unsplash.jpg"
+              alt=""
+            />
+            <img
+              src="./images/trash.svg"
+              alt="trash icon"
+              class="card__delete"
+            />
+            <figcaption class="card__caption">Valle de Yosemite</figcaption>
+          </figure>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copy">
+          &copy; 2024 Daniel Cornelio
+        </p>
+      </footer>
+      <div class="cover">
+        <form class="form">
+          <img src="./images/close.svg" alt="" class="form__close" />
+          <h3 class="form__title">Nuevo lugar</h3>
+          <input
+            class="form__input form__input_title"
+            type="text"
+            placeholder="Título"
+          />
+          <input
+            class="form__input form__input_link"
+            type="text"
+            placeholder="Enlace a la imagen"
+          />
+          <button type="submit" class="form__button">Crear</button>
+        </form>
+      </div>
     </div>
-</body>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
