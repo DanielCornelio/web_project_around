@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Daniel Cornelio" />
+    <meta
+      name="description"
+      content="Alrededor de los EE.UU., una página interactiva en la que los usuarios pueden añadir, eliminar o dar me gusta a las fotos"
+    />
+    <meta name="keywords" content="EE.UU., Red social, Likes, Photos" />
     <title>Around The U.S.</title>
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
@@ -29,117 +35,125 @@
             <button type="button" class="profile__edit-button">
               <img
                 class="profile__edit-icon"
-                src="./images/edit.png"
+                src="./images/edit.svg"
                 alt="edit icon"
               />
             </button>
             <p class="profile__job">Explorador</p>
           </div>
           <button class="profile__add-button">
-            <img src="./images/add.png" alt="" />
+            <img src="./images/add.svg" alt="add button" />
           </button>
         </section>
         <section class="elements">
           <figure class="card">
-            <img
-              class="card__image"
-              src="./images/kirill-pershin-1088404-unsplash.jpg"
-              alt=""
-            />
-            <img
-              src="./images/trash.svg"
-              alt="trash icon"
-              class="card__delete"
-            />
+            <div class="card__image-container">
+              <img
+                class="card__image"
+                src="./images/img1.jpg"
+                alt="Ruta de peregrinación en Japón"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash icon"
+                class="card__delete"
+              />
+            </div>
             <figcaption class="card__caption">Valle de Yosemite</figcaption>
           </figure>
           <figure class="card">
-            <img
-              class="card__image"
-              src="./images/kirill-pershin-1088404-unsplash.jpg"
-              alt=""
-            />
-            <img
-              src="./images/trash.svg"
-              alt="trash icon"
-              class="card__delete"
-            />
+            <div class="card__image-container">
+              <img
+                class="card__image"
+                src="./images/img2.jpg"
+                alt="Letrero neón del cine"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash icon"
+                class="card__delete"
+              />
+            </div>
             <figcaption class="card__caption">Valle de Yosemite</figcaption>
           </figure>
           <figure class="card">
-            <img
-              class="card__image"
-              src="./images/kirill-pershin-1088404-unsplash.jpg"
-              alt=""
-            />
-            <img
-              src="./images/trash.svg"
-              alt="trash icon"
-              class="card__delete"
-            />
+            <div class="card__image-container">
+              <img
+                class="card__image"
+                src="./images/img3.jpg"
+                alt="Juego mecanico"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash icon"
+                class="card__delete"
+              />
+            </div>
             <figcaption class="card__caption">Valle de Yosemite</figcaption>
           </figure>
           <figure class="card">
-            <img
-              class="card__image"
-              src="./images/kirill-pershin-1088404-unsplash.jpg"
-              alt=""
-            />
-            <img
-              src="./images/trash.svg"
-              alt="trash icon"
-              class="card__delete"
-            />
+            <div class="card__image-container">
+              <img
+                class="card__image"
+                src="./images/img4.jpg"
+                alt="Rueda de la fortuna"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash icon"
+                class="card__delete"
+              />
+            </div>
             <figcaption class="card__caption">Valle de Yosemite</figcaption>
           </figure>
           <figure class="card">
-            <img
-              class="card__image"
-              src="./images/kirill-pershin-1088404-unsplash.jpg"
-              alt=""
-            />
-            <img
-              src="./images/trash.svg"
-              alt="trash icon"
-              class="card__delete"
-            />
-            <figcaption class="card__caption">Valle de Yosemite</figcaption>
+            <div class="card__image-container">
+              <img
+                class="card__image"
+                src="./images/img5.jpg"
+                alt="Persona en bicicleta"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash icon"
+                class="card__delete"
+              />
+            </div>
+            <figcaption class="card__caption">
+              Valle de Yosemitewwwwwwwwwwwwwwwwwwwwwwww
+            </figcaption>
           </figure>
           <figure class="card">
-            <img
-              class="card__image"
-              src="./images/kirill-pershin-1088404-unsplash.jpg"
-              alt=""
-            />
-            <img
-              src="./images/trash.svg"
-              alt="trash icon"
-              class="card__delete"
-            />
+            <div class="card__image-container">
+              <img class="card__image" src="./images/img6.jpg" alt="Semáforo" />
+              <img
+                src="./images/trash.svg"
+                alt="trash icon"
+                class="card__delete"
+              />
+            </div>
             <figcaption class="card__caption">Valle de Yosemite</figcaption>
           </figure>
         </section>
       </main>
       <footer class="footer">
-        <p class="footer__copy">
-          &copy; 2024 Daniel Cornelio
-        </p>
+        <p class="footer__copy">&copy; 2024 Daniel Cornelio</p>
       </footer>
-      <div class="cover">
-        <form class="form">
-          <img src="./images/close.svg" alt="" class="form__close" />
-          <h3 class="form__title">Nuevo lugar</h3>
+      <div class="popup">
+        <form class="popup__container">
+          <img src="./images/close.svg" alt="" class="popup__close" />
+          <h3 class="popup__title">Nuevo lugar</h3>
           <input
-            class="form__input form__input_title"
+            class="popup__input popup__input_title"
             type="text"
             placeholder="Título"
           />
           <input
-            class="form__input form__input_link"
+            class="popup__input popup__input_link"
             type="text"
             placeholder="Enlace a la imagen"
           />
-          <button type="submit" class="form__button">Crear</button>
+          <button type="submit" class="popup__button">Crear</button>
         </form>
       </div>
     </div>
