@@ -19,7 +19,7 @@ function handleShowModal(evt) {
 
   cover.classList.add("popup_opened");
 
-  console.log("showModal");
+
 }
 
 function handleCloseModal(evt) {
@@ -30,7 +30,7 @@ function handleCloseModal(evt) {
 
   cover.classList.remove("popup_opened");
 
-  console.log("removeModal");
+
 }
 
 // Lo siguiente es el manipulador (handler) de entrega de formularios, aunque
@@ -52,8 +52,7 @@ function handleProfileFormSubmit(evt) {
   // Obtén los valores de cada campo desde la propiedad de valor correspondiente
   nameInput.value;
   jobInput.value;
-  console.log(nameInput.value);
-  console.log(jobInput.value);
+
 
   // Selecciona los elementos donde se introducirán los valores de los campos
   let profileName = document.querySelector(".profile__name");

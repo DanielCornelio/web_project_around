@@ -15,7 +15,7 @@
   border-radius: 50%;
 }
 .profile__info {
-  max-width: 414px;
+  width: 414px;
   margin: 0 0 0 30px;
   display: flex;
   flex-wrap: wrap;
@@ -23,8 +23,11 @@
 }
 .profile__name {
   font-size: 42px;
-  width: 500;
+  width: 373px;
   line-height: 56px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .profile__edit-button {
   width: 24px;
@@ -37,7 +40,11 @@
   cursor: pointer;
 }
 .profile__job {
+  width: 373px;
   margin-top: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .profile__add-button {
   width: 150px;

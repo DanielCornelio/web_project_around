@@ -44,6 +44,7 @@
   line-height: 29px;
   text-align: center;
 
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 879px) {
