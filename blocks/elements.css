@@ -38,6 +38,7 @@
   border-radius: 0 0 10px 10px;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 767px) {

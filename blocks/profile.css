@@ -25,6 +25,9 @@
   font-size: 42px;
   width: 500;
   line-height: 56px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .profile__edit-button {
   width: 24px;
@@ -38,6 +41,9 @@
 }
 .profile__job {
   margin-top: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .profile__add-button {
   width: 150px;
