@@ -4,6 +4,7 @@
   width: 882px;
   gap: 20px 18px;
 }
+
 .card {
   width: 282px;
   height: 361px;
@@ -12,15 +13,18 @@
   border-radius: 10px;
   position: relative;
 }
+
 .card__image-container {
   width: 282px;
   height: 282px;
 }
+
 .card__image {
   border-radius: 10px 10px 0 0;
   width: 100%;
   height: 100%;
 }
+
 .card__delete {
   position: absolute;
   top: 18px;
@@ -28,6 +32,7 @@
   width: 18px;
   height: 19px;
 }
+
 .card__delete:hover {
   cursor: pointer;
   opacity: 60%;
@@ -41,6 +46,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .card__title {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -50,22 +56,25 @@
   font-size: 24px;
   line-height: 29px;
   text-align: center;
-  white-space: nowrap;
 }
+
 .card__like {
   width: 21px;
   height: 19px;
 }
+
 .card__like:hover {
   opacity: 60%;
   cursor: pointer;
 }
+
 @media screen and (max-width: 879px) {
   .elements {
     width: 320px;
     gap: 20px;
     justify-content: center;
   }
+
   .card {
     width: 282px;
     height: 361px;
