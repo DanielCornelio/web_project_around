@@ -46,6 +46,12 @@
 .popup__input::placeholder {
   color: #c4c4c4;
 }
+.popup__input_name {
+  margin: 54px 0 30px;
+}
+.popup__input_job {
+  margin-bottom: 48px;
+}
 .popup__input_title {
   margin: 54px 0 30px;
 }
@@ -81,6 +87,9 @@
   }
   .popup__input {
     padding-bottom: 9px;
+  }
+  .popup__input_name {
+    margin: 76px 0 30px;
   }
   .popup__input_title {
     margin: 76px 0 30px;
