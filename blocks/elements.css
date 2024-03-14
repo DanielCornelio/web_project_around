@@ -26,15 +26,22 @@
   top: 18px;
   right: 15px;
   width: 18px;
+  height: 19px;
 }
+.card__delete:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
 .card__caption {
   padding: 25px;
   background-color: #fff;
   border-radius: 0 0 10px 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.card__title{
+.card__title {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -43,10 +50,16 @@
   font-size: 24px;
   line-height: 29px;
   text-align: center;
-
   white-space: nowrap;
 }
-
+.card__like {
+  width: 21px;
+  height: 19px;
+}
+.card__like:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
 @media screen and (max-width: 879px) {
   .elements {
     width: 320px;

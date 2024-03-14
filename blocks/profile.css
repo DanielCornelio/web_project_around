@@ -38,10 +38,13 @@
 }
 .profile__edit-button:hover {
   cursor: pointer;
+  opacity: 60%;
 }
 .profile__job {
   width: 373px;
   margin-top: 16px;
+  line-height: 21.78px;
+
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -53,8 +56,11 @@
   border: 2px solid #fff;
   background-color: transparent;
   color: #fff;
-  cursor: pointer;
   margin-left: auto;
+}
+.profile__add-button:hover {
+  opacity: 60%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 879px) {
@@ -65,17 +71,26 @@
   }
   .profile__info {
     width: 280px;
+    margin: 0;
+    justify-content: space-around;
   }
   .profile__name {
+    width: 250px;
     font-size: 22px;
   }
   .profile__job {
+    width: 250px;
     font-size: 14px;
     line-height: 16.94px;
+    margin-top: 0;
+    text-align: center;
+  }
+  .profile__edit-button {
+    margin-left: 0;
   }
 
   .profile__add-button {
     width: 282px;
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
 }
