@@ -46,111 +46,19 @@
           </button>
         </section>
         <section class="elements">
-          <figure class="card">
-            <div class="card__image-container">
-              <img
-                class="card__image"
-                src="./images/img1.jpg"
-                alt="Ruta de peregrinación en Japón"
-              />
-
-              <img
-                src="./images/trash.svg"
-                alt="trash icon"
-                class="card__delete"
-              />
-            </div>
-            <figcaption class="card__caption">
-              <p class="card__title">Ruta de peregrinación en Japón</p>
-              <img class="card__like" src="./images/heart.svg" alt="like" />
-            </figcaption>
-          </figure>
-          <figure class="card">
-            <div class="card__image-container">
-              <img
-                class="card__image"
-                src="./images/img2.jpg"
-                alt="Letrero neón del cine"
-              />
-              <img
-                src="./images/trash.svg"
-                alt="trash icon"
-                class="card__delete"
-              />
-            </div>
-            <figcaption class="card__caption">
-              <p class="card__title">Letrero neón del cine</p>
-              <img class="card__like" src="./images/heart.svg" alt="like" />
-            </figcaption>
-          </figure>
-          <figure class="card">
-            <div class="card__image-container">
-              <img
-                class="card__image"
-                src="./images/img3.jpg"
-                alt="Juego mecánico"
-              />
-              <img
-                src="./images/trash.svg"
-                alt="trash icon"
-                class="card__delete"
-              />
-            </div>
-            <figcaption class="card__caption">
-              <p class="card__title">Juego mecánico</p>
-              <img class="card__like" src="./images/heart.svg" alt="like" />
-            </figcaption>
-          </figure>
-          <figure class="card">
-            <div class="card__image-container">
-              <img
-                class="card__image"
-                src="./images/img4.jpg"
-                alt="Rueda de la fortuna"
-              />
-              <img
-                src="./images/trash.svg"
-                alt="trash icon"
-                class="card__delete"
-              />
-            </div>
-            <figcaption class="card__caption">
-              <p class="card__title">Rueda de la fortuna</p>
-              <img class="card__like" src="./images/heart.svg" alt="like" />
-            </figcaption>
-          </figure>
-          <figure class="card">
-            <div class="card__image-container">
-              <img
-                class="card__image"
-                src="./images/img5.jpg"
-                alt="Persona en bicicleta"
-              />
-              <img
-                src="./images/trash.svg"
-                alt="trash icon"
-                class="card__delete"
-              />
-            </div>
-            <figcaption class="card__caption">
-              <p class="card__title">Persona en bicicleta</p>
-              <img class="card__like" src="./images/heart.svg" alt="like" />
-            </figcaption>
-          </figure>
-          <figure class="card">
-            <div class="card__image-container">
-              <img class="card__image" src="./images/img6.jpg" alt="Semáforo" />
-              <img
-                src="./images/trash.svg"
-                alt="trash icon"
-                class="card__delete"
-              />
-            </div>
-            <figcaption class="card__caption">
-              <p class="card__title">Semáforo</p>
-              <img class="card__like" src="./images/heart.svg" alt="like" />
-            </figcaption>
-          </figure>
+          <!-----------TEMPLATE--------------->
+          <template id="template-card">
+            <figure class="card">
+              <div class="card__image-container">
+                <img class="card__image" />
+                <button class="card__delete"></button>
+              </div>
+              <figcaption class="card__caption">
+                <p class="card__title"></p>
+                <button class="card__like"></button>
+              </figcaption>
+            </figure>
+          </template>
         </section>
       </main>
       <footer class="footer">
@@ -175,8 +83,13 @@
       </div>
 
       <div class="popup popup_new-place">
-        <form class="popup__container" >
-          <img src="./images/close.svg" alt="close icon" class="popup__close" id="closeNP" />
+        <form class="popup__container">
+          <img
+            src="./images/close.svg"
+            alt="close icon"
+            class="popup__close"
+            id="closeNP"
+          />
           <h3 class="popup__title">Nuevo lugar</h3>
           <input
             class="popup__input popup__input_title"
@@ -192,8 +105,6 @@
         </form>
       </div>
     </div>
-
-   
 
     <script src="./scripts/index.js"></script>
   </body>

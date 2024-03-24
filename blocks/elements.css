@@ -27,6 +27,10 @@
 
 .card__delete {
   position: absolute;
+  background-image: url("../images/trash.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
   top: 18px;
   right: 15px;
   width: 18px;
@@ -39,7 +43,7 @@
 }
 
 .card__caption {
-  padding: 25px;
+  padding: 21px;
   background-color: #fff;
   border-radius: 0 0 10px 10px;
   display: flex;
@@ -48,23 +52,36 @@
 }
 
 .card__title {
-  text-overflow: ellipsis;
+  width: 244px;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
   color: #000;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
-  text-align: center;
 }
 
 .card__like {
-  width: 21px;
+  width: 24px;
   height: 19px;
+  background-image: url("../images/heart.svg");
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+  background-color: #ffffff;
 }
 
 .card__like:hover {
   opacity: 60%;
+  cursor: pointer;
+}
+.card__like_active {
+  background-image: url("../images/heart-active.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 19px;
+  border: 0;
   cursor: pointer;
 }
 

@@ -12,6 +12,63 @@ let nameInput = document.querySelector(".popup__input_name");
 let profileJob = document.querySelector(".profile__job");
 let jobInput = document.querySelector(".popup__input_job");
 
+const templateCard = document.querySelector("#template-card");
+const cardArea = document.querySelector(".elements");
+
+const initialCards = [
+  {
+    name: "Valle de Yosemite",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/yosemite.jpg",
+  },
+  {
+    name: "Lago Louise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lake-louise.jpg",
+  },
+  {
+    name: "Montañas Calvas",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/bald-mountains.jpg",
+  },
+  {
+    name: "Latemar",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/latemar.jpg",
+  },
+  {
+    name: "Parque Nacional de la Vanoise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/vanoise.jpg",
+  },
+  {
+    name: "Lago di Braies",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
+  },
+];
+
+//Template cards
+function cardGenerator(title, link) {
+  const card = templateCard.cloneNode(true).content.querySelector(".card");
+  const cardImage = card.querySelector(".card__image");
+  const cardTitle = card.querySelector(".card__title");
+  const likeButton = card.querySelector(".card__like");
+  const deleteButton = card.querySelector(".card__delete");
+  cardImage.src = link;
+  cardTitle.textContent = title;
+  cardImage.alt = title;
+  likeButton.addEventListener("click", function () {
+    likeButton.classList.toggle("card__like_active");
+  });
+  deleteButton.addEventListener("click", function () {
+    card.remove();
+  });
+  cardImage.addEventListener("click", function () {
+    handleOpenImage(title, link);
+  });
+  return card;
+}
+
+initialCards.forEach(function (element) {
+  const newCard = cardGenerator(element.name, element.link);
+  cardArea.append(newCard);
+});
+
 function handleShowModal(evt) {
   evt.preventDefault();
   coverProfile.classList.add("popup_opened");
@@ -41,9 +98,9 @@ function handleProfileFormSubmit(evt) {
 }
 function handleNewPlaceFormSubmit(evt) {
   evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileJob.textContent = jobInput.value;
+  
   coverProfile.classList.remove("popup_opened");
+  cardGenerator()
 }
 
 showModal.addEventListener("click", handleShowModal);
