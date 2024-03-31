@@ -14,6 +14,13 @@ let jobInput = document.querySelector(".popup__input_job");
 
 const templateCard = document.querySelector("#template-card");
 const cardArea = document.querySelector(".elements");
+const overlayImage = document.querySelector("#popup-overlay-image");
+
+//Popup imagenes
+const popupImageOpen = document.querySelector("#popup_image-open");
+const closeImage = document.querySelector("#popup__close-image");
+const popupImageTitle = document.querySelector(".popup__image-title");
+const popupImage = document.querySelector(".popup__image");
 
 const initialCards = [
   {
@@ -42,6 +49,7 @@ const initialCards = [
   },
 ];
 
+
 //Template cards
 function cardGenerator(title, link) {
   const card = templateCard.cloneNode(true).content.querySelector(".card");
@@ -63,6 +71,24 @@ function cardGenerator(title, link) {
   });
   return card;
 }
+function handleOpenImage(title, link){
+  popupImage.src = link;
+  popupImageTitle.textContent = title;
+  popupImageOpen.classList.add("popup_opened");
+  closeImage.addEventListener("click", handleCloseImage);
+  overlayImage.addEventListener("click", handleOverlayClick);
+}
+function handleCloseImage() {
+  popupImageOpen.classList.remove("popup_opened");
+  overlayImage.removeEventListener("click", handleOverlayClick);
+}
+function handleOverlayClick(event) {
+  if (event.target.classList.contains("popup__overlay")) {
+    closePopup();
+    closeAddImagePopup();
+    handleCloseImage();
+  }
+}
 
 initialCards.forEach(function (element) {
   const newCard = cardGenerator(element.name, element.link);
@@ -75,6 +101,7 @@ function handleShowModal(evt) {
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
 }
+
 
 function handleShowModalNewPlace(evt) {
   evt.preventDefault();
