@@ -2,7 +2,7 @@
 let coverProfile = document.querySelector(".popup_profile");
 let coverNewPlace = document.querySelector(".popup_new-place");
 let formElement = document.querySelector(".popup__container");
-// let formElementNewPlace = document.querySelector(".popup__container");
+let formElementNewPlace = document.querySelector(".popup__container");
 let showModal = document.querySelector(".profile__edit-button");
 let showModalNewPlace = document.querySelector(".profile__add-button");
 let closeModal = document.querySelector(".popup__close");
@@ -21,6 +21,10 @@ const popupImageOpen = document.querySelector("#popup_image-open");
 const closeImage = document.querySelector("#popup__close-image");
 const popupImageTitle = document.querySelector(".popup__image-title");
 const popupImage = document.querySelector(".popup__image");
+
+const titleInput = document.querySelector(".popup__input_title");
+const imageInput = document.querySelector(".popup__input_link");
+
 
 const initialCards = [
   {
@@ -71,6 +75,13 @@ function cardGenerator(title, link) {
   });
   return card;
 }
+
+initialCards.forEach(function (element) {
+  const newCard = cardGenerator(element.name, element.link);
+  cardArea.append(newCard);
+});
+
+
 function handleOpenImage(title, link){
   popupImage.src = link;
   popupImageTitle.textContent = title;
@@ -90,10 +101,7 @@ function handleOverlayClick(event) {
   }
 }
 
-initialCards.forEach(function (element) {
-  const newCard = cardGenerator(element.name, element.link);
-  cardArea.append(newCard);
-});
+
 
 function handleShowModal(evt) {
   evt.preventDefault();
@@ -108,14 +116,38 @@ function handleShowModalNewPlace(evt) {
   coverNewPlace.classList.add("popup_opened");
 }
 
+function handleAddImageFormSubmit(evt) {
+  evt.preventDefault();
+  const newImageTitle = titleInput.value;
+  const newImageUrl = imageInput.value;
+  handleCloseModalNewPlace()
+
+}
+
+
+function handleAddCardSubmit(evt) {
+  evt.preventDefault();
+  if (evt.submitter.classList.contains("popup__button")) {
+    const newCard = cardGenerator(titleInput.value, imageInput.value);
+    cardArea.prepend(newCard);
+  }
+  coverNewPlace.classList.remove("popup_opened");
+  
+
+}
+function handleCloseModalNewPlace(evt) {
+  console.log(evt);
+  evt.preventDefault();
+  coverNewPlace.classList.remove("popup_opened");
+}
+
+
 function handleCloseModal(evt) {
   evt.preventDefault();
   coverProfile.classList.remove("popup_opened");
 }
-function handleCloseModalNewPlace(evt) {
-  evt.preventDefault();
-  coverNewPlace.classList.remove("popup_opened");
-}
+
+
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -123,12 +155,7 @@ function handleProfileFormSubmit(evt) {
   profileJob.textContent = jobInput.value;
   coverProfile.classList.remove("popup_opened");
 }
-function handleNewPlaceFormSubmit(evt) {
-  evt.preventDefault();
-  
-  coverProfile.classList.remove("popup_opened");
-  cardGenerator()
-}
+
 
 showModal.addEventListener("click", handleShowModal);
 showModalNewPlace.addEventListener("click", handleShowModalNewPlace);
@@ -137,4 +164,6 @@ closeModal.addEventListener("click", handleCloseModal);
 closeModalNewPlace.addEventListener("click", handleCloseModalNewPlace);
 
 formElement.addEventListener("submit", handleProfileFormSubmit);
-// formElementNewPlace.addEventListener("submit", handleNewPlaceFormSubmit);
+formElementNewPlace.addEventListener("submit", handleAddImageFormSubmit);
+
+coverNewPlace.addEventListener("submit", handleAddCardSubmit);
