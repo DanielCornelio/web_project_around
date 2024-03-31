@@ -136,4 +136,13 @@
     height: 46px;
     font-size: 14px;
   }
+  .popup__image {
+    width: 300px;
+    height: 350px;
+    margin-top: 0;
+  }
+  .popup__image-title {
+    margin-top: 10px;
+    margin-right: 60px;
+  }
 }
