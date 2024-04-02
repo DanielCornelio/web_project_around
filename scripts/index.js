@@ -84,6 +84,7 @@ initialCards.forEach(function (element) {
 
 function handleOpenImage(title, link){
   popupImage.src = link;
+  popupImage.alt = title;
   popupImageTitle.textContent = title;
   popupImageOpen.classList.add("popup_opened");
   closeImage.addEventListener("click", handleCloseImage);
@@ -120,7 +121,8 @@ function handleAddImageFormSubmit(evt) {
   evt.preventDefault();
   const newImageTitle = titleInput.value;
   const newImageUrl = imageInput.value;
-  handleCloseModalNewPlace()
+  coverNewPlace.classList.remove("popup_opened");
+
 
 }
 
@@ -136,7 +138,6 @@ function handleAddCardSubmit(evt) {
 
 }
 function handleCloseModalNewPlace(evt) {
-  console.log(evt);
   evt.preventDefault();
   coverNewPlace.classList.remove("popup_opened");
 }
