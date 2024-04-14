@@ -138,23 +138,28 @@ function handleAddCardSubmit(evt) {
 
 }
 function handleCloseModalNewPlace(evt) {
-  evt.preventDefault();
   coverNewPlace.classList.remove("popup_opened");
 }
 
 
 function handleCloseModal(evt) {
-  evt.preventDefault();
   coverProfile.classList.remove("popup_opened");
 }
-
-
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
   coverProfile.classList.remove("popup_opened");
+}
+
+function closeWithEsc(event) {
+  console.log(event.key)
+  if (event.key === "Escape") {
+    handleCloseModal();
+    handleCloseModalNewPlace();
+    handleCloseImage();
+  }
 }
 
 
@@ -168,3 +173,4 @@ formElement.addEventListener("submit", handleProfileFormSubmit);
 formElementNewPlace.addEventListener("submit", handleAddImageFormSubmit);
 
 coverNewPlace.addEventListener("submit", handleAddCardSubmit);
+document.addEventListener("keydown", closeWithEsc);
