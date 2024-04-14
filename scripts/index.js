@@ -162,6 +162,14 @@ function closeWithEsc(event) {
   }
 }
 
+function handleOverlayClick(event) {
+  if (event.target.classList.contains("popup_opened")) {
+    handleCloseModal();
+    handleCloseModalNewPlace();
+    handleCloseImage();
+  }
+}
+
 
 showModal.addEventListener("click", handleShowModal);
 showModalNewPlace.addEventListener("click", handleShowModalNewPlace);
@@ -174,3 +182,7 @@ formElementNewPlace.addEventListener("submit", handleAddImageFormSubmit);
 
 coverNewPlace.addEventListener("submit", handleAddCardSubmit);
 document.addEventListener("keydown", closeWithEsc);
+
+coverProfile.addEventListener("click", handleOverlayClick)
+coverNewPlace.addEventListener("click", handleOverlayClick)
+popupImageOpen.addEventListener("click", handleOverlayClick)
