@@ -3,22 +3,8 @@
   height: 100%;
   width: 100%;
   position: fixed;
-
   justify-content: center;
   background-color: rgba(0, 0, 0, 50%);
-}
-.popup__error {
-  color: red;
-}
-
-.popup__input_type_error {
-  border-bottom: red 1px solid;
-}
-
-.popup__button_disabled {
-  background-color: white;
-  color: #cccccc;
-  pointer-events: none;
 }
 .popup_opened {
   top: 0px;
@@ -56,17 +42,15 @@
   border-bottom: 1px solid #c4c4c4;
   outline: 0;
 }
-.popup__input:invalid {
-  border-bottom: 1px solid red;
-}
+
 .popup__input::placeholder {
   color: #c4c4c4;
 }
 .popup__input_name {
-  margin: 54px 0 30px;
+  margin: 54px 0 0;
 }
 .popup__input_job {
-  margin-bottom: 48px;
+  margin: 30px 0 0;
 }
 .popup__input_title {
   margin: 54px 0 30px;
@@ -82,12 +66,24 @@
   border: none;
   border-radius: 2px;
   font-size: 18px;
+  margin-top: 48px;
+}
+.popup__button:disabled {
+  background-color: white;
+  color: lightgray;
+  border: 1px solid lightgrey;
+  margin-top:10px;
 }
 
 .popup__button:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.popup__input_has_error {
+  border-bottom: 1px solid red;
+}
+
 .popup__content-image {
   position: relative;
   margin: auto;
@@ -113,6 +109,16 @@
 
 .popup__close-button-image:hover {
   opacity: 0.6;
+}
+.popup__error {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  color: red;
+  margin: 0 36px;
+  display: flex;
 }
 
 .popup__image {
