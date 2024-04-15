@@ -7,6 +7,19 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, 50%);
 }
+.popup__error {
+  color: red;
+}
+
+.popup__input_type_error {
+  border-bottom: red 1px solid;
+}
+
+.popup__button_disabled {
+  background-color: white;
+  color: #cccccc;
+  pointer-events: none;
+}
 .popup_opened {
   top: 0px;
   display: flex;
@@ -42,6 +55,9 @@
   border: none;
   border-bottom: 1px solid #c4c4c4;
   outline: 0;
+}
+.popup__input:invalid {
+  border-bottom: 1px solid red;
 }
 .popup__input::placeholder {
   color: #c4c4c4;
