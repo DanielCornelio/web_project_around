@@ -134,7 +134,7 @@ function handleAddCardSubmit(evt) {
     cardArea.prepend(newCard);
   }
   coverNewPlace.classList.remove("popup_opened");
-  
+
 
 }
 function handleCloseModalNewPlace(evt) {
@@ -154,12 +154,12 @@ function handleProfileFormSubmit(evt) {
 }
 
 function closeWithEsc(event) {
-  console.log(event.key)
   if (event.key === "Escape") {
     handleCloseModal();
     handleCloseModalNewPlace();
     handleCloseImage();
   }
+
 }
 
 function handleOverlayClick(event) {
@@ -168,6 +168,8 @@ function handleOverlayClick(event) {
     handleCloseModalNewPlace();
     handleCloseImage();
   }
+  document.removeEventListener("keydown", closeWithEsc);
+
 }
 
 
