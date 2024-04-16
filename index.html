@@ -102,13 +102,21 @@
           <input
             class="popup__input popup__input_title"
             type="text"
+            minlength="2"
+            maxlength="30"
             placeholder="Título"
+            name="place"
+            required
           />
+          <span class="popup__error popup__error_type_place"></span>
           <input
             class="popup__input popup__input_link"
             type="text"
             placeholder="Enlace a la imagen"
+            name="link"
+            required
           />
+          <span class="popup__error popup__error_type_link"></span>
           <button type="submit" class="popup__button">Crear</button>
         </form>
       </div>

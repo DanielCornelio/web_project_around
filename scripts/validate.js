@@ -9,16 +9,14 @@ function setEventListeners(form, formConfig) {
       const errorNode = form.querySelector(
         `.popup__error_type_${inputElement.name}`
       );
-      if (!inputElement.validity.valid) { 
+      if (!inputElement.validity.valid) {
         inputElement.classList.add(formConfig.inputErrorClass);
-        console.log(inputElement)
-        console.log(inputElement.validationMessage)
-
+  
         errorNode.textContent = inputElement.validationMessage;
-        
+
         } else {
         inputElement.classList.remove(formConfig.inputErrorClass);
-       
+
            errorNode.textContent = "";
       }
       submitButton.disabled = !isValidInputs(formInputs);
